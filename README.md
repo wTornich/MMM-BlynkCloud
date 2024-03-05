@@ -36,11 +36,9 @@ Seguindo uma sequência de passos, primeiramente é necessário configurar um di
 
 Ao configurar um dispositivo, é gerado um Token de identificação que é utilizado toda vez que for necessário comunicar com ele. No projeto, o Token é utilizado no código que será carregado no microcontrolador e para fazer requisições na API da plataforma no código do módulo.
 
-### IMG - Credenciais da plataforma
-
 Em seguida já será possível adicionar recursos como botões, sliders, gráficos e labels. Na plataforma esses recursos são chamados de Widgets.
 
-### IMG - Widgets e print da plataforma
+![Widgets](https://github.com/wTornich/MMM-BlynkCloud/blob/main/imgs_md/widgets_platform.png?raw=true)
 
 Para que um Widget funcione, é necessário atrelar a ele um ou mais Datastreams, dependendo do Widget. Datastreams são variáveis configuráveis para estabelecer comunicação com os microcontroladores, seja diretamente com os pinos, utilizando Digital Pins e Analog Pins, ou indiretamente, utilizando Virtual Pins.
 *OBS: Atualmente a plataforma suspendeu a utilização de Digital e Analog Pins.
