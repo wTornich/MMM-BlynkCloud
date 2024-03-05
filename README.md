@@ -32,7 +32,7 @@ Antes de apresentar as opções de configurações do módulo, é necessário en
 
 Seguindo uma sequência de passos, primeiramente é necessário configurar um dispositivo.
 
-### IMG - New Device
+![New Device & Token](https://github.com/wTornich/MMM-BlynkCloud/blob/main/imgs_md/device_&_token.png?raw=true)
 
 Ao configurar um dispositivo, é gerado um Token de identificação que é utilizado toda vez que for necessário comunicar com ele. No projeto, o Token é utilizado no código que será carregado no microcontrolador e para fazer requisições na API da plataforma no código do módulo.
 
