@@ -21,6 +21,7 @@ Para utilizar este módulo, adicione-o à matriz de módulos no arquivo config/c
 ## Exemplo de interface do módulo
 
 ### IMG - Interface do Módulo
+![Module Interface](https://github.com/wTornich/MMM-BlynkCloud/blob/main/imgs_md/module_interface.png?raw=true)
 
 ##
 
