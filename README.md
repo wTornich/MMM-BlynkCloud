@@ -4,8 +4,6 @@ O módulo MMM-BlynkCloud é uma abstração da plataforma de Internet das Coisas
 
 Nesta primeira versão do MMM-BlynkCloud é possível criar botões, sliders, gráficos e labels (no formato de Widgets) personalizáveis que interajam com microcontroladores.
 
-## 
-
 Para utilizar este módulo, adicione-o à matriz de módulos no arquivo config/config.js:
 
 
@@ -17,13 +15,12 @@ Para utilizar este módulo, adicione-o à matriz de módulos no arquivo config/c
 	    ]
     }
 
-## 
 ## Exemplo de interface do módulo
 
 ### IMG - Interface do Módulo
 ![Module Interface](https://github.com/wTornich/MMM-BlynkCloud/blob/main/imgs_md/module_interface.png?raw=true)
-
-##
+![Module Interface](https://github.com/wTornich/MMM-BlynkCloud/blob/main/imgs_md/MMM-BlynkCloud%20S1.jpg?raw=true)
+![Module Interface](https://github.com/wTornich/MMM-BlynkCloud/blob/main/imgs_md/MMM-BlynkCloud%20S2.jpg?raw=true)
 
 ## Utilização do módulo
 
@@ -41,28 +38,29 @@ Em seguida já será possível adicionar recursos como botões, sliders, gráfic
 
 ![Widgets](https://github.com/wTornich/MMM-BlynkCloud/blob/main/imgs_md/widgets_platform.png?raw=true)
 
-Para que um Widget funcione, é necessário atrelar a ele um ou mais Datastreams, dependendo do Widget. Datastreams são variáveis configuráveis para estabelecer comunicação com os microcontroladores, seja diretamente com os pinos, utilizando Digital Pins e Analog Pins, ou indiretamente, utilizando Virtual Pins.
-*OBS: Atualmente a plataforma suspendeu a utilização de Digital e Analog Pins.
+Para que um Widget funcione, é necessário atribuir a ele um ou mais Datastreams, dependendo do Widget. Datastreams são variáveis configuradas para estabelecer fluxos de dados e comunicação entre a plataforma e os microcontroladores, seja diretamente com os pinos, utilizando Digital Pins e Analog Pins, ou indiretamente, utilizando Virtual Pins.
 
 ### IMG - Datastreams
 
-Depois de criar os Datastreams, basta atrelar eles aos Widgets desejados. Assim, o lado da plataforma já está configurado.
+Depois de criar os Datastreams, basta atribuir eles aos Widgets desejados. Para que o módulo MMM-BlynkCloud funcione não precisa fazer essas atribuições aos Widgets da plataforma, ou seja, somente os Datastreams precisam ser configurados. 
 
 ### Configurando microcontroladores e cenário testado
 
-A plataforma Blynk gera um código base para poder configurar e testar os microcontroladores. Porém, nos arquivos deste repositório há uma pasta com dois exemplos de códigos utilizados para teste. Um deles é para ser utilizado com o Esp8266 e o outro para ser utilizado com o Esp32.
+A plataforma Blynk gera um código base para poder configurar e testar os microcontroladores. Entretanto, nos arquivos deste repositório há uma pasta com dois exemplos de códigos utilizados para teste. Um deles é para ser utilizado com o Esp8266 e o outro para ser utilizado com o Esp32.
 
-Vale ressaltar que foram utilizadas algumas bibliotecas:
+Vale ressaltar que foram utilizadas algumas bibliotecas, além da biblioteca da plataforma Blynk (BlynkSimpleEsp8266 e BlynkSimpleEsp32):
 
- - WifiManager: Facilita a configuração de wifi, funcionando da mesma
-   forma para os dois microcontroladores; 
-  - BlynkSimpleEsp8266 e BlynkSimpleEsp32 - São as bibliotecas da própria plataforma que permite estabelecer comunicação com a mesma e usar as funções da Blynk para os microcontroladores;
- - Bibliotecas extras para utilizar sensores, como o DHT22 e o LDR.
+ - WifiManager: Facilita a configuração de wifi nos microcontroladores; 
+ - DHT22 para utilizar o sensor de temperatura e humidade;
+ - LDR para utilizar o sensor de luminosidade;
+ 
+## Utilização do módulo
 
-
+### Estrutura do modulo
 
 
 ### MODULE STYLE
+###### *IMG EXAMPLE*
 
 | Properties | Description | Values | Values Type
 |--|--|--|--|
@@ -72,6 +70,7 @@ Vale ressaltar que foram utilizadas algumas bibliotecas:
 
 
 ### DEVICES
+###### *IMG EXAMPLE*
 
 | Properties | Description | Values | Values Type
 |--|--|--|--|
@@ -79,6 +78,7 @@ Vale ressaltar que foram utilizadas algumas bibliotecas:
 
 
 ### DEVICE
+###### *IMG EXAMPLE*
 
 | Properties | Description | Values | Values Type
 |--|--|--|--|
@@ -89,6 +89,7 @@ Vale ressaltar que foram utilizadas algumas bibliotecas:
 | widgets | Device Widget Array | Widgets list | Array
 
 ### WIDGET
+###### *IMG EXAMPLE*
 
 | Properties | Description | Values | Values Type
 |--|--|--|--|
@@ -99,6 +100,7 @@ Vale ressaltar que foram utilizadas algumas bibliotecas:
 ### WIDGET STYLES
 
 ##### DEVICE STATUS
+###### *IMG EXAMPLE*
 | Properties | Description | Values | Values Type
 |--|--|--|--|
 | min_width | Widget container minimum width | Value in pixels or percentage | String
@@ -108,6 +110,7 @@ Vale ressaltar que foram utilizadas algumas bibliotecas:
 | align | Widget alignment | left, center, right | String
 
 ##### BUTTON
+###### *IMG EXAMPLE*
 | Properties | Description | Values | Values Type
 |--|--|--|--|
 | min_width | Widget container minimum width | Value in pixels or percentage | String
@@ -120,16 +123,17 @@ Vale ressaltar que foram utilizadas algumas bibliotecas:
 | icon_align | Button icon alignment | left, center, right | String
 
 ##### SLIDER
+###### *IMG EXAMPLE*
 | Properties | Description | Values | Values Type
 |--|--|--|--|
 ||||
 ##### GAUGE
+###### *IMG EXAMPLE*
 | Properties | Description | Values | Values Type
 |--|--|--|--|
 ||||
 ##### LABEL
+###### *IMG EXAMPLE*
 | Properties | Description | Values | Values Type
 |--|--|--|--|
 ||||
-
-
